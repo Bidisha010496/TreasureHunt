@@ -8,52 +8,46 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.bidisha.ace.MainActivity">
-    
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp">
 
     <TextView
+        android:id="@+id/ruleshead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:text="Rules Section:"
+        android:textColor="#000000"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/rulesdescrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ruleshead"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:scrollbars="vertical"
+        android:text="@string/rules"
+        android:textColor="#000000"
+        android:textSize="15dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button2"
         android:layout_alignParentLeft="true"
-        tools:text="12"
-        android:textSize="25dp"
-        android:textColor="#000000"
-        android:id="@+id/currentQ"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/currentQ"
-        android:layout_alignParentTop="true"
-        tools:text=" / 20"
-        android:textSize="25dp"
-        android:textColor="#000000"
-        />
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/scan_results"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        tools:text="17:08"
-        android:textSize="25dp"
-        android:textColor="#000000"
-        android:layout_margin="10dp" />
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="33dp"
+        android:text="I agree to the terms and conditions above." />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/button2"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="20dp"
-        android:text="Take Picture" />
+        android:text="START"
+        android:textColor="#FFFFFF" />
+
 
 </RelativeLayout>
