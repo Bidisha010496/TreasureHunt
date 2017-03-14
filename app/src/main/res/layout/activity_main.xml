@@ -47,7 +47,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="START"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:enabled="false" />
 
 
 </RelativeLayout>

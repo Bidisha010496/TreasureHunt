@@ -27,7 +27,7 @@
                 android:layout_alignParentTop="true"
                 android:textColor="#000000"
                 android:textSize="25dp"
-                tools:text="12" />
+                tools:text="2" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -36,19 +36,52 @@
                 android:layout_toRightOf="@+id/currentQ"
                 android:textColor="#000000"
                 android:textSize="25dp"
-                tools:text=" / 20" />
+                android:text=" / 6" />
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/scan_results"
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
             android:layout_margin="10dp"
+
+
             android:textColor="#000000"
-            android:textSize="25dp"
-            tools:text="17:08" />
+
+            >
+            <!--
+        mitra00:
+            This shows the mins left
+            -->
+
+            <TextView
+                android:id="@+id/time_sec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:background="#f44336"
+                android:textColor="#000000"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:text=" | 20" />
+
+            <!--
+     mitra00:
+         This shows the seconds left
+         -->
+
+            <TextView
+                android:id="@+id/time_mins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/time_sec"
+                android:layout_alignParentTop="true"
+                android:background="#f44336"
+                android:textColor="#000000"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:text="12" />
+        </RelativeLayout>
     </RelativeLayout>
 
     <TextView
@@ -59,21 +92,22 @@
         android:layout_marginTop="30dp"
         android:textColor="#000000"
         android:textSize="30dp"
-        tools:text="@string/ques1" />
+        android:text="@string/ques1" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/question"
         android:layout_marginTop="60dp"
-        android:backgroundTint="@color/colorPrimaryDark" />
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:id="@+id/ansQ" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/qr"
+            android:id="@+id/submit"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -85,6 +119,7 @@
             android:layout_alignParentLeft="true"
             android:textAllCaps="true"
             android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/hint"
             android:layout_width="100dp"
